@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 모바일 브라우저면 true, 
+        // 그렇지 않으면 false를 리턴하는 사용자 정의 함수
+        function isMobile(){
+            let tmpUser = navigator.userAgent;
+            let isMobile = false;
+
+            if(tmpUser.indexOf("iPhone")>-1
+                || tmpUser.indexOf("iPad") >-1
+                || tmpUser.indexOf("Android")>-1){
+                isMobile = true;
+
+            }
+
+            return isMobile
+        }
+            let isMobileWeb = isMobile();
+
+        if( isMobileWeb){
+            document.write("<h1>모바일 웹 브라우저로 접속하셨습니다.</h1>")
+        }else{
+            document.write("<h1>PC용 웹 브라우저로 접속하셨습니다.</h1>")
+        }
+        
+
+    
+    </script>
+</body>
+</html>

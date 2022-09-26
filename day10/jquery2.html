@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <input type="button" id="pure" value="pure"/>
+    <input type="button" id="jQuery" value="jQuery"/>
+
+
+    <script>
+        // pure : javascript
+        // 버튼클릭시 alert, 'pure'
+        let target =document.getElementById('pure');
+        target.addEventListener('click', function(){
+            alert('pure');
+        });
+
+        // jQuery : jquery
+        // 버튼클릭 alert, 'jQuery'
+        $('#jQuery').on('click',function(){
+            alert('jQuery');
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

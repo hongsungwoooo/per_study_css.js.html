@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            isNaN(문자열) : - 주어진 문자열이 숫자형식이 아니면 true,
+                            숫자형식이면 false를 리턴
+                            - 변수의 NaN 여부를 boolean 형태로 리턴한다.
+                            - 파라미터 수자로 변환할 수 없는 문자열일 경우에는
+                            NaN형태이므로 true를 리턴
+                            - 파라미터가 숫자 모양을 한 문자열이거나 실제 숫자형
+                            변수일 경우에는 NaN이 아니므로 false를 리턴한다.
+            NaN : 숫자형태가 아닌경우 "NaN"값을 리턴
+        */
+
+        var v1 = "가나다라";
+        var v2 = "12345";
+
+        var is_num1 = !isNaN(v1);
+        var is_num2 = !isNaN(v2);
+
+        if( is_num1 ){
+            document.write("<h1>" + v1 + "은(는) 숫자 입니다.</h1>");
+        } else {
+            document.write("<h1>" + v1 + "은(는) 숫자가 아닙니다..</h1>");
+        }
+
+        if( is_num2 ){
+            document.write("<h1>" + v2 + "은(는) 숫자 입니다.</h1>");
+        } else {
+            document.write("<h1>" + v2 + "은(는) 숫자가 아닙니다..</h1>");
+        }
+    </script>
+</body>
+</html>

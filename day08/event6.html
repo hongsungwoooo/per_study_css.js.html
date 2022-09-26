@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="target1" value="property"/>
+    <input type="button" id="target2" value="listener"/>
+
+    <script>
+        function onClick(){
+            alert("onclick")
+        }
+        function onClick2(){
+            alert("클릭2")
+        }
+
+        // property
+        document.getElementById("target1").onclick = function(){onClick()};
+        document.getElementById("target1").onclick = function(){onClick2()};
+
+
+        // listener
+        document.getElementById("target2").addEventListener('click', onClick);
+        document.getElementById("target2").addEventListener('click', onClick2);
+
+        // 이벤트 제거
+        document.getElementById("target2").removeEventListener('click', onClick);
+
+    </script>
+</body>
+</html>

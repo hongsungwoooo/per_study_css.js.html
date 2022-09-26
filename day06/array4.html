@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s = [
+            '이유덕', '이재영', '권종표', '이재영', '박민호', '강상희',
+            '이재영', '김지완', '최승혁', '이성연', '박영서',
+            '박민호', '전경헌', '송정환', '김재성', '이유덕', '전경헌'
+        ];
+
+        // 1. "이재영"이라는 이름이 몇번 반복되는지?
+        // 함수를 생성, "이재영" -> 파라미터로 넘겨받도록 
+        function name( param ){
+            let name = param;
+            let count = 0;
+
+            for( let i = 0; i<s.length; i++ ){
+                if( s[i] == name ){
+                    count++;
+                }
+            }
+
+            return name + " : " + count;
+        }
+
+        document.write(name('이재영'));
+        document.write('<br>');
+
+        // 2. 중복된 이름을 제거한 이름을 출력
+        // 결과 값 : 권종표,강상희,김지완,최승혁,이성연,박영서,송정환,김재성
+        function name2(){
+            let uniq = [];
+
+            for( let i = 0; i<s.length; i++ ){
+                let uni_cnt = 0;
+
+                for( let j = 0; j<s.length; j++ ){
+                    if( s[i] == s[j] ){
+                        uni_cnt++;
+                    }
+                }
+
+                if( uni_cnt < 2 ){
+                    uniq.push(s[i]);
+                }
+            }
+
+            return uniq;
+        }
+        
+        document.write(name2());
+        document.write('<br>');
+
+
+    </script>
+</body>
+</html>

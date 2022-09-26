@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체를 생성
+        let people = {};
+
+        // 변수추가
+        people.name = "자바학생";
+        people.gender = "여자";
+
+        people.sayName = function(){
+            document.write("<h1>" + this.name + "</h1>");
+        };
+
+        people.sayGender = function(){
+            document.write("<h1>" + this.gender + "</h1>")
+        }
+
+        people.saySomething = function(msg){
+            document.write("<h1>" + msg + "</h1>")
+        }
+
+        people.getName = function(){
+            return this.name;
+        }
+
+        people.getGender = function(){
+            return this.gender;
+        }
+
+        document.write("<h1>" + people.name + "님은" +people.gender + "입니다.</hr>");
+        document.write("<h1>---------------</h1>");
+        people.sayName();
+        people.sayGender();
+        document.write("<h1>---------------</h1>");
+        document.write("<h1>" + people.getName() + "님은" +people.getGender() + "입니다.</hr>");
+        document.write("<h1>---------------</h1>");
+        people.saySomething("Good!")
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

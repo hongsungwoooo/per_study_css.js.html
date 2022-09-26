@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function f(x){
+            var y = x+1;
+            document.write("<h1>"+ y +"</hr>");
+        }
+        function f2(x,y){
+            var z = x + y;
+            document.write("<h1>"+z+"</h1>");
+        }
+        function f3(x, y){
+           return x + y 
+        }
+        document.write("--------------")
+        f(5);
+        f(6);
+        f(10);
+        f("javascript");
+        f(5,10);
+        f();
+        document.write("--------------")
+        f2(4,50);
+        f2(4);
+        f2(2,6,9,10,50);
+        // 앞에두자리만받아옴
+        document.write("--------------")
+        var a = f3(1, 2)
+        document.write("<h1>a : " + a+"</h1>");
+        var b = f3(2, 10, 6)
+        document.write("<h1>b : " + b+"</h1>");
+        
+    </script>
+</body>
+</html>

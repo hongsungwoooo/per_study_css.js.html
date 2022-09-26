@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3시 30분까지
+        // 1.Math.random() 사용해서 5자리 인증번호 생성, 출력
+        // 00159, 45911, ..
+        // function
+        
+        // 두 수 사이에 난수를 리턴하는 함수
+        function random( n1, n2 ){
+            return Math.floor(Math.random() * (n2 - n1 + 1)) + n1;
+        }
+
+        // 인증번호 5자리
+        let auth = "";
+
+        for( var i = 0; i<5; i++ ){
+            auth += random(0,9);
+        }
+
+        document.write("<h1>인증번호 : " + auth + "</h1>");
+
+
+        document.write("<br>-------------<br>");
+        // 2. '가위', '바위', '보' -> 랜덤으로 출력
+        // function
+        let array = ['가위', '바위', '보'];
+
+        function getGame(){
+            let i = Math.floor(Math.random() * 3);
+            document.write(array[i]);
+        }
+
+        getGame();
+
+    </script>
+</body>
+</html>

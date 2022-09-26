@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            - alert(문자열) : 가장 인반적으로 사용되는 대화상자
+            - prompt(문자열) : 사용자의 입력 내용을 얻고자 하는 경우에 사용
+            - confirm(문자열) : 사용자에게 어떠한 결정사항에 대한 긍정 혹은
+                                부정의 답을 얻고자 하는 경우에 사용
+                                긍정의 버튼 클릭 -> true
+                                부정의 버튼 클릭 -> false
+        */
+
+        // 만약 아무런 값도 입력되지 않았거나 사용자가 취소 버튼을 눌렀다면,
+        // 처음 설정한 "" 빈 문자열이 리턴된다.
+        var user_id = prompt("아이디를 입력하세요.", "");
+
+        if( user_id != "" ){
+            alert("안녕하세요. " + user_id + "님");
+
+            var result = confirm("정말 로그아웃 하시겠습니까?");
+
+            if(result){
+                alert("로그아웃 되셨습니다.");
+            } else {
+                alert("로그아웃이 취소 되셨습니다.");
+            }
+        }
+    </script>
+</body>
+</html>

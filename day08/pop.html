@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>open 메소드</h1>
+    <div>
+        <a onclick="open1();" href="#">새창 열기</a>
+        <br>
+        <a onclick="open2();" href="#">팝업 창 열기</a>
+        <br>
+        <a onclick="open3('https://www.naver.com');" href="#">팝업 창 열기2</a>
+        <br>
+    </div>
+
+    <script>
+        function open1(){
+            // 새창 띄우기
+            window.open('open.html');
+        }
+        function open2(){
+            // 2 : 페이지 이름
+            // 3 : 사이즈 및 여러 옵션 지정
+            window.open('open.html','',
+                        'width=300, height=500, scrollbars=no, toolbar=no,');
+        }
+        function open3(url){
+            window.open(url,'',
+                        'width=300, height=500, scrollbars=no, toolbar=no,');
+        }
+    </script>
+</body>
+</html>

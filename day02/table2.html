@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <table border ="2">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+                <th>주소</th>
+                <th>회비</th>
+                <!-- th 제목같은 느낌으로 굵은 글씨체 -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>최진혁</td>
+                <td>남</td>
+                <td rowspan="2">청주</td>
+                <td>1000</td>
+                <!-- rowspan2 2칸을 병합 -->
+            </tr>
+            <tr>
+                <td>최유빈</td>
+                <td>여</td>
+                <!-- <td>청주</td> 위에서 행을 병합했으므로 삭제 -->
+                <td>500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">합계</td>
+                <!-- <td></td> 열을 병합했으므로 삭제 -->
+                <!-- <td></td> 열을 병합했으므로 삭제 -->
+                <td>1500</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

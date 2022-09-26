@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 마우스를 ?위에 올리면 60이 보이고 떼면 다시 ?표시<h1>태그 대상 -->
+    <h1 onmouseover="showResult();" onmouseout="hideResult()">10+50 = <span id ="question">?</span></h1>
+    <p>결과를 보시려면 수식 위에 마우스를 올리세요.</p>
+
+    <script>
+        function showResult(){
+            document.getElementById("question").innerHTML = 60;
+        }
+        function hideResult(){
+            document.getElementById("question").innerHTML = "?";
+        }
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // day오류..
+        // date 객체에 임의의 날짜/시간 정하기
+        const days = ['일', '월', '화', '수', '목', '금', '토'] ;
+
+        let mydate = new Date();
+
+        // Date 객체안에 저장된 시각을 임의의 날짜로 변경하기
+        mydate.setYear(2010);
+        mydate.setMonth(1); //0부터 시작하니까 2월
+        mydate.setDate(14);
+        mydate.setHours(12);
+        mydate.setMinutes(16);
+        mydate.setSeconds(30);
+
+        // 년,월,일,시,분,초를 리턴
+        let yy = mydate.getFullYear();
+        let mm = mydate.getMonth()+1;
+        let dd = mydate.getDate();
+        let i = mydate.getDay
+        let day = days[i];
+
+        let hh = mydate.getHours();
+        let mi = mydate.getMinutes();
+        let ss = mydate.getSeconds();
+
+        const result = yy + "-" + mm+ "-"+dd+ "-"+day+ "요일"
+                    + hh+ ":"+mi+ ":"+ss;
+        document.write("<h1>"+result+"</h1>");
+        
+
+    </script>
+</body>
+</html>

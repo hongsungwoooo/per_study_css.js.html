@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mydate = new Date();
+
+        // 년,월,일 리턴받기
+        let yy = mydate.getFullYear();
+        // 월은 0이 1월, 11이 12월을 의미한다.
+        let mm = mydate.getMonth()+1;
+        let dd = mydate.getDate();
+
+        const result = yy+"-"+mm+"-"+dd;
+        document.write("<h1>"+result+"</h1>")
+    </script>
+</body>
+</html>

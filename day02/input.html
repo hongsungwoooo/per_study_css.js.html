@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        입력 내용을 감싸기 위한 부분
+        서버로 전송되는 영역을 감싼다. 
+    -->
+    <form>
+        <fieldset>
+            <!-- 그룹의 제목 -->
+            <legend>내용 입력하기</legend>                
+            <!-- 입력 요소 배치 -->
+            <div>
+                <label for = "user_id">아이디</label>   <!-- user_id부분이 밑에와 동일해야함 (입력창깜빡이기능) -->
+                <input type="text" name="user_id" id="user_id"
+                    maxlength="10" placeholder="아이디를 입력해주세요" />
+            </div>
+            <div>
+                <label for = "user_name">회원이름</label>   <!-- user_name부분이 밑에와 동일해야함 (입력창깜빡이기능) -->
+                <input type="text" name="user_name" id="user_name"
+                    maxlength="10" placeholder="이름을 입력해주세요" />
+            </div>
+            <div>
+                <label for = "user_pw">비밀번호</label>   <!-- user_pw부분이 밑에와 동일해야함 (입력창깜빡이기능) -->
+                <input type="password" name="user_pw" id="user_pw"
+                    minlength="10" maxlength="20" placeholder="비밀번호를 입력해주세요" />
+            </div>
+            <div>
+                <label for = "memo">자기소개</label>   
+                    <textarea name="memo" id="memo" maxlength="100"
+                    placeholder="간단한 자기 소개 입력"></textarea>
+                       <!-- 짧은글이 아니라 input이 아닌 어떠한 공간(tex안에 저장 -->
+            </div>
+            <div>
+                <label for = "data">숨겨진항목</label>  <!--많이씀 -->
+                <input type="hidden" value="숨겨진값" name="data" id="data">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

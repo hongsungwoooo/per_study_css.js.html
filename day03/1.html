@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼</h1><hr/>
+    <form method="post" action = "regist.jsp">
+        <div>
+            <p>
+            <label for = "user_id">아이디 :</label> 
+            <input type="text" name="user_id" id="user_id" required
+                maxlength="10" placeholder="아이디를 입력해주세요" />
+            </p>
+        </div>
+        <div>
+            <p>
+            <label for = "user_pw">비밀번호 :</label> 
+            <input type="password" name="user_pw" id="user_pw" required
+                minlength="10" maxlength="20" placeholder="비밀번호를 입력해주세요" />
+            </p>
+            <!-- required 필수입력옵션부여 -->
+        </div>
+            <fieldset>
+                <legend>성별</legend>                
+                <div>
+                    <p>
+                    남자 <input type="radio" name="Male" value="m"checked/>
+                    여자  <input type="radio" name="Female" value="f" />
+                    </p>
+                </div>
+            </fieldset>
+            <p>
+            <fieldset>
+                <legend>좋아하는 과목</legend> 
+                    <div>
+                        <p>
+                        JAVA <input type="checkbox" name="subject1" value="JAVA" checked > <label for="subject1"> </label>
+                        JSP<input type="checkbox" name="subject2" value="JSP"checked> <label for="subject2"> </label>
+                        HTML<input type="checkbox" name="subject3" value="HTML"checked> <label for="subject3"> </label>
+                        CSS<input type="checkbox" name="subject4" value="CSS"> <label for="subject4"> </label>
+                        </p>
+                    </div>    
+            </fieldset></p>
+           직업
+            <select name="color">
+                <option value="red">학생</option>
+                <option value="black">선생님</option>
+                <option value="blue">개발자</option>
+            </select><hr/>
+            <input type="file">
+            <hr/>
+        <p>
+        <div>
+           <p> <label for = "memo">자기소개</label>   </p>
+                <textarea name="memo" id="memo" maxlength="300" cols="30"
+                placeholder="자기 소개서를 입력하세요" ></textarea>
+        </div>
+        </p>   
+        <p>
+            <label for = "postnumber">우편번호 :</label>  
+            <input type="text"  readonly />
+            <button type="button">우편번호</button>
+            <!-- readonly 읽기전용(사용자가 보이기는하나 작성할 수 없음) -->
+        </p>
+        <p>
+            <label for = "address">주소 :</label>  
+            <input type="text" readonly /> 
+        </p>
+        <p>
+            <label for = "daddress">상세주소 :</label>  
+            <input type="text"  /> 
+        </p>
+        <p>
+            <label for = "notes">참고사항 :</label>  
+            <input type="text" value="참고" disabled /> 
+        </p>
+        <input type="reset" value="다시쓰기" onclick="alert('완료')"/> 
+        <input type="submit" value="확인">
+        <hr/>
+    </form>
+</body>
+</html>

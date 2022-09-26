@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 두 날짜의 차이를 구하기 - TimeStamp 값의 사용
+        //     - TimeStamp 1970년 1월 1일 자정부터 지금까지 지난 시각을 초 단위로
+        //     바꾼 값
+        //     - javascript에서는 gettime() 함수를 통해서 date객체가 담고있는 기간을 
+        //     1/1000초 단위의 TimeStamp형태로 변환하여 리턴해 준다.
+        //     -(24시간*60분*60초*1000)으로 나누면 날짜 차이값을 구할 수 있다.
+
+        // 날짜 객체
+        let theday = new Date(2022, 0, 1);
+        let today  = new Date()
+
+        let cnt = today.getTime() - theday.getTime();
+
+        let day = Math.floor(cnt / (24 * 60 * 60 * 1000));
+        document.write("<h1>올해는" + day + "일 지났습니다.</h1>" )
+
+
+    </script>
+</body>
+</html>

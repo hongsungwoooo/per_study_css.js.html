@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <script src="script.js"></script> id태그가 로드되기전에 호출되었기때문에 오류 --> 
+
+<script>
+    // window.onload = function(){} 
+    // 함수는 웹브라우저의 모든 구성요소에 대한 로드가 끝났을 때 
+    // 브라우저에 의해서 호출되는 함수다.
+    window.onload = function(){
+    let hw = document.getElementById('hw');
+    hw.addEventListener('click', function(){
+    alert("hello world");
+});
+}
+</script>
+<body>
+    <input type="button" id="hw" value="Hello World">
+
+    <!-- <script src="script.js"></script> -->
+
+
+
+</body>
+</html>

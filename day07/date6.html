@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="startTime()">
+    <h1 id = "timer"></h1>
+
+    <script>
+        function printTime(){
+            // 현재시간을 구한다.
+            let days = ['일', '월', '화', '수', '목', '금', '토'];
+
+            let mydate = new Date();
+            let yy = mydate.getFullYear();
+            let mm = mydate.getMonth()+1;
+            let dd = mydate.getDate();
+            let i = mydate.getDay();
+            let day = days[i];
+            let hh = mydate.getHours();
+            let mi = mydate.getMinutes();
+            let ss = mydate.getSeconds();
+
+            // 완성된 현재 시각
+            let result = yy + "-" + mm+ "-" +dd+ "-" +day +"요일"+hh+ ":" +mi+ ":" +ss;
+        
+            // id속성값이 timer인 요소에게 결과를 출력한다.
+            document.getElementById("timer").innerHTML = result;
+
+        }
+
+        function startTime(){
+            setInterval(printTime, 1000);
+        }
+
+    </script>
+</body>
+</html>

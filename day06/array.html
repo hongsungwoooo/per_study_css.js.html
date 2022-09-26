@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myarray = ["HTML", "CSS", "javascript"];
+
+        // 배열값 읽기
+        document.write("<h1>" + myarray[0] + "</h1>");
+        document.write("<h1>" + myarray[1] + "</h1>");
+        document.write("<h1>" + myarray[2] + "</h1>");
+
+        // 배열에 저장된 값 변경
+        myarray[0] = "JAVA";
+        myarray[1] = "JPS";
+        myarray[2] = "Spring Boot";
+
+        document.write("<h1>" + myarray[0] + "</h1>");
+        document.write("<h1>" + myarray[1] + "</h1>");
+        document.write("<h1>" + myarray[2] + "</h1>");
+        document.write("<h1>--------------------</h1>");
+
+        // 반복문을 통하여 배열 출력
+        for( let i = 0; i<myarray.length; i++ ){
+            document.write("<p>" + myarray[i] + "</p>");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>.on()</h1>
+    <p>이 문장 위로 마우스를 움직여 보세요</p>
+    <div></div>
+
+
+    <script>
+    
+    // $('p').on('mouseover', function(){
+    //     $("div").append("<br>마우스 커서가 문장 위로 들어옴.")
+    // });
+    // $('p').on('mouseout', function(){
+    //     $("div").append("<br>마우스 커서가 문장을 빠져 나감.")
+    // });
+    // $('p').on('click' ,function(){
+    //     $("div").append("<br>마우스가 문장을 클릭 ")
+    // })
+    
+    
+    // 객체형식으로 선언
+    $('p').on({
+        click   : function(){
+            $("div").append("<br>마우스가 문장을 클릭 ")
+        },
+        mouseenter  : function(){
+            $("div").append("<br>마우스 커서가 문장 위로 들어옴.")
+        },
+        mouseleave  : function(){
+            $("div").append("<br>마우스 커서가 문장을 빠져 나감.")
+        }
+    });
+       
+       
+
+    </script>
+
+
+
+</body>
+</html>

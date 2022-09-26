@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    .selected{
+        background-color: tomato !important;
+        color: white;
+        border: 2px solid red !important;
+    }
+</style>
+<body>
+    <ul>
+        <li id="htmlID">html</li>
+        <li class="selectClass">CSS</li>
+        <li>javascript</li>
+        <li>PHP</li>
+        <li id="mySqlID">mySql</li>
+    </ul>
+
+    <script>
+        // id
+        // addClass('class이름')
+        $('#htmlID').addClass('selected');
+
+        // class
+        $('.selectClass').addClass('selected');
+
+        // tag
+        $('li').addClass('selected')
+        // 모든 li태그가 대상이된다
+
+
+    </script>
+
+</body>
+</html>
