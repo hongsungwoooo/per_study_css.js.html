@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+       
+         .thumbnail { width: 500px; height: 470px; margin-bottom: 5px; }
+    </style>
+</head>
+
+<body>
+    <!-- 베너영역 -->
+    <div id="banner">
+        <a href="#" id="banner-link" target="_blank">
+            <img src="" id="banner-img" width="320" />
+        </a>
+    </div>
+    <!-- <ul class="list clearfix">
+        <li class='item pull-left'><img src="1.jpg" class="slide1"/></li>
+        <li class='item pull-left'><img src="2.jpg" class="slide1"/></li>
+        <li class='item pull-left'><img src="3.jpg" class="slide1"/></li>
+        <li class='item pull-left'><img src="4.jpg" class="slide1"/></li>
+        <li class='item pull-left'><img src="5.jpg" class="slide1"/></li>
+        <li class='item pull-left'><img src="6.jpg" class="slide1"/></li>
+    </ul> -->
+
+
+
+
+    <script>
+
+        // 배너의 이미지와 클릭시 이동할 url을 담은 배열
+        let banner = [
+            { img : '1.jpg', url : 'http://naver.com'},
+            { img : '2.jpg', url : 'http://google.com'},
+            { img : '3.jpg', url : 'http://daum.net'},
+            { img : '4.jpg', url : 'http://youtube.com'}
+        ];
+
+        // 두 인자값 사이의 랜덤값을 리턴하는 함수
+        function random(n1, n2){
+            return parseInt(Math.random()*(n2-n1+1))+n1;
+        }
+        
+        // banner 항복들의 임의의 요소 하나를 선택해서
+        // 해당 배너에 보여주는 역할
+        // #banner 영역에 적용하는 함수
+        function random_banner(){
+            // 배열길이 0~배열길이 -1 사이의 랜덤값 얻기
+            let ranCnt = random(0, banner.length-1)
+            // 데이터중 하나 선택 -> 객체
+            let item = banner[ranCnt];
+            // 배너 적용하기
+            $("#banner-link").attr('href', item.url);
+            $("#banner-img").attr('src', item.img);
+
+        }
+
+        // 페이지가 열린 후 호출 될 함수 호출
+        $(function(){
+            // 베너 적용 함수 호출
+            random_banner()
+
+            // 일정 시간마다 배너 변경
+            setInterval(function(){
+                random_banner();
+            }, 3000);
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let index = 0;                               //이미지에 접근하는 인덱스
+        // window.onload = function(){
+        //     slideShow();
+        // }
+        
+        // function slideShow() {
+        // let i;
+        // let x = document.getElementsByClassName("slide1");  //slide1에 대한 dom 참조
+        // for (i = 0; i < x.length; i++) {
+        //    x[i].style.display = "none";   //처음에 전부 display를 none으로 한다.
+        // }
+        // index++;
+        // if (index > x.length) {
+        //     index = 1;  //인덱스가 초과되면 1로 변경
+        // }   
+        // x[index-1].style.display = "block";  //해당 인덱스는 block으로
+        // setTimeout(slideShow, 2000);   //함수를 4초마다 호출
+  
+        // }
+
+    </script>
+</body>
+
+</html>

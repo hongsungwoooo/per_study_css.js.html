@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div>
+        <button type="button" id="single">클릭하세요</button>
+    </div>
+    <hr>
+    <div>
+        <button type="button" value="m1" class="multi">button0(0번 클릭됨)</button>
+        <button type="button" value="m2" class="multi">button1(1번 클릭됨)</button>
+        <button type="button" value="m3" class="multi">button2(2번 클릭됨)</button>
+    </div>
+    <hr>
+    <script>
+        let counter = 0;
+        let multiCnt = { multi:[0,0,0] };
+       
+        $(".multi").click(function(){
+            let idx = $(this).index();
+           multiCnt.multi[idx]++;
+           $(this).html("button" + idx + "(" + multiCnt.multi[idx] + "번클릭됨)")
+        });
+
+        // class로 셀렉-> 기능 만들것
+
+
+    </script>
+
+
+</body>
+</html>

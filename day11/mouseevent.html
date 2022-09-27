@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>jQueyr .click(), .dblclick()</h1>
+    <button id="btn" value="btn">버튼</button>을 클릭 또는 더블클릭하세요
+    <p id="text"></p>
+
+
+    <script>
+       
+
+
+
+    //  $('#btn').click(function(){
+    //     $("#text").append("<br>마우스가 문장을 클릭 ")
+    // })
+    // $('button').dblclick(function(){
+    //     $("#text").append("<br>마우스가 문장을 더블클릭 ")
+    // })
+
+    $('button').click(function(){
+        $("#text").text("클릭이 되었습니다.");
+    });
+
+    $('button').dblclick(function(){
+        $("#text").text("더블 클릭이 되었습니다.");
+    });
+    
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
