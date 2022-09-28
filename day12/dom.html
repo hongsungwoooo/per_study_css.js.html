@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+    <style type="text/css">
+        /* 테이블의 모든 칸에 동일한 크기와 정렬 지정 */
+        td { width: 100px; height: 100px; text-align: center; }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>1번</td> <td>2번</td> <td>3번</td>
+        </tr>
+        <tr>
+            <td>4번</td> <td>5번</td> <td>6번</td>
+        </tr>
+        <tr>
+            <td>7번</td> <td>8번</td> <td>9번</td>
+        </tr>
+    </table>
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $("td:eq(4)").css("background","tomato");
+        $("td").eq(2).css("background", "powderblue");
+        $("td:eq(4)").next().css("background", "orange");
+        $("td").eq(4).prev().css("background", "purple");
+        $("td").eq(4).parent().css("color","white");
+
+        $("td").eq(4).parent().next().css("color","red");
+        $("td").eq(4).parent().prev().css("color","grey");
+        $("td").eq(4).parent().next().children().css("text-decoration","underline");
+        $("td").eq(4).parent().next().children().eq(1).css("font-weight","bold");
+    </script>
+</body>
+
+</html>

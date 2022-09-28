@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+    <style type="text/css">
+        td { width: 100px; height: 100px; text-align: center; }
+		</style>
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<button id="fade_out">fade_out</button>
+	<button id="fade_in">fade_in</button>
+	<button id="fade_toggle">fade_toggle</button>
+	<hr/>
+	<button id="slide_up">slide_up</button>
+	<button id="slide_down">slide_down</button>
+	<button id="slide_toggle">slide_toggle</button>
+	<hr/>
+	<div id="box" style="width: auto; height: 300px; background-color: tomato"></div>
+
+    <script type="text/javascript">
+		$("#fade_out").click(function(){
+			$("#box").fadeOut(200);
+		})
+		$("#fade_in").click(function(){
+			$("#box").fadeIn(200);
+		})
+		$("#fade_toggle").click(function(){
+			$("#box").fadeToggle(200);
+		})
+
+		$("#slide_up").click(function(){
+			$("#box").slideUp(200);
+		})
+		$("#slide_down").click(function(){
+			$("#box").slideDown(200);
+		})
+		$("#slide_toggle").click(function(){
+			$("#box").slideToggle(200);
+		})
+
+
+
+
+    </script>
+</body>
+
+</html>

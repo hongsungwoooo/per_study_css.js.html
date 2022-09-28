@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+</head>
+<body>    
+    <form id="myform">
+        <div>
+            <label for='username'>사용자이름</label>
+            <input type='text' name='username' id='username' />
+        </div>
+        <div>
+            <label for='userpass'>비밀번호</label>
+            <input type='password' name='userpass' id='userpass' />
+        </div>
+        <button type="submit">입력값 확인</button>
+        <hr />
+
+        <!-- 선택결과를 표시할 div -->
+        <div id="result"></div>
+    </form>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        // 폼에서의 데이터 전송 이벤트
+        $("#myform").submit(function(e){
+            // 데이터 전송 강제 중단
+            e.preventDefault();
+
+            let username = $("#username").val();    // 입력값 가져오기
+            if(!username){                          // 입력값이 없다면?
+                alert("이름을 입력하세요");          // 메시지 표시    
+                $("#username").focus();             // 포커스 강제 지정
+                return false;                       // 함수 처리 중단
+            }
+
+            let userpass = $("#userpass").val();
+            if(!userpass){
+                alert("비밀번호를 입력하세요!");
+                $("#userpass").focus();
+                return false;
+            }
+
+            // 입력값을 화면에 표시하기
+            $("#result").append("<div>이름 : " + username + "</div>");
+            $("#result").append("<div>비밀번호 : " + userpass + "</div>");
+
+            // 백엔드 페이지에게 데이터를 전송해야 할 경우 사용
+            //$(this).submit();
+        });
+
+
+    </script>
+</body>
+
+</html>
+
+
+

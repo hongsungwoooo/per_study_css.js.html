@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <style type="text/css">
+        /** 공통 속성 설정 */
+        * { padding: 0; margin: 0; }
+        ul { list-style: none; }
+        .pull-left { float: left; }
+        .clearfix:after { content: ''; display: block; clear: both; float: none; }
+
+        /** 목록 박스의 넓이 지정 및 중앙 배치 */
+        .gallery { width: 700px; margin: auto; border: 5px solid #d5d5d5; }
+
+        /** 각 항목에 대한 가로 배열 */
+        .gallery .item { width: 25%; }
+
+        /** 각 항목 링크에 대한 크기 지정 */
+        .gallery .item .modal { display: block; margin: 10px; width: auto; }
+
+        /** 이미지에 대한 테두리 제거 및 여백 지정 */
+        .gallery .item .modal img { width: 100%; height: 100%; }
+
+        /** 화면 전체를 덮는 배경 레이어의 위치, 크기, 투명도 지정 > 기본적으로 표시되지 않도록 설정 */
+        .gray_layer {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: black;
+            opacity: 0.60;
+            display: none;
+        }
+
+        /** 이미지가 표현될 레이어를 화면 중앙에 배치 > 기본적으로 표시되지 않도록 설정 */
+        .over_layer {
+            /* 요소의 좌측상단 꼭지점이 화면 중앙에 위치하게 된다. */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* 요소의 크기/2 만큼 왼쪽,상단 방향으로 이동시켜 가운데 배치한다 */
+            margin-top: -244px;
+            margin-left: -325px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 화면에 표시될 원본 보기 영역 - 기본적으로 숨겨진 상태이다. -->
+    <div class='gray_layer' id='background'></div>
+    <div class='over_layer' id='front'></div>
+    <!-- 이미지 목록 -->
+    <ul class='gallery clearfix'>
+        <li class='item pull-left'><a href="img/photo1.jpg" class="modal"><img src="img/photo1_thum.jpg" alt="샹드리아" /></a></li>
+        <li class='item pull-left'><a href="img/photo2.jpg" class="modal"><img src="img/photo2_thum.jpg" alt="장미" /></a></li>
+        <li class='item pull-left'><a href="img/photo3.jpg" class="modal"><img src="img/photo3_thum.jpg" alt="바다" /></a></li>
+        <li class='item pull-left'><a href="img/photo4.jpg" class="modal"><img src="img/photo4_thum.jpg" alt="문" /></a></li>
+        <li class='item pull-left'><a href="img/photo5.jpg" class="modal"><img src="img/photo5_thum.jpg" alt="바다" /></a></li>
+        <li class='item pull-left'><a href="img/photo6.jpg" class="modal"><img src="img/photo6_thum.jpg" alt="꽃" /></a></li>
+        <li class='item pull-left'><a href="img/photo7.jpg" class="modal"><img src="img/photo7_thum.jpg" alt="하늘" /></a></li>
+        <li class='item pull-left'><a href="img/photo8.jpg" class="modal"><img src="img/photo8_thum.jpg" alt="건물" /></a></li>
+    </ul>
+    
+    <script type="text/javascript">
+        $(".modal").click(function(e){
+            e.preventDefault();
+
+            $("#background").fadeIn(200);   // 배경 레이어
+            $("#front").fadeIn(200);        // 이미지 레이어
+
+            let src = $(this).attr('href'); // 클릭한 링크의 href 속성값 = 이미지경로
+            let img = "<img src='" + src + "' />";  // 이미지 태그 구성
+            $("#front").html(img);
+        });
+
+        // 화면에 표시된 배경 레이어를 클릭한 경우
+        $("#background").click(function(){
+            $(this).fadeOut(300);       // 배경 레이어 숨김
+            $("#front").fadeOut(300);   // 이미지 레이어 숨길
+        });
+
+    </script>
+</body>
+
+</html>

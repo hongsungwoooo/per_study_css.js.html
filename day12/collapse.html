@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+
+    <style>
+    	/* 기본 여백 제거 */
+        * { padding: 0; margin: 0; }
+
+        /* 전체 박스 크기 및 정렬 */
+    	.collapse { width: 500px; margin: auto; }
+
+        /* 제목 영역의 배경색상과 태두리 */
+    	.collapse-title { background: #eeeeee; border: 1px solid #d5d5d5; }
+
+        /* 제목영역의 링크에 대한 크기, 글자모양 */
+    	.collapse-title a {
+    		display: block; width: auto;
+    		padding: 10px;
+    		color: #222;
+    		font-size: 14px; 
+    		text-decoration: none
+    	}
+
+        /* 내용영역의 여백, 글자크기, 태두리, 숨김 */
+    	.content {
+    		padding: 10px 15px;
+    		font-size: 12px;
+    		border-left: 1px solid #d5d5d5;
+    		border-right: 1px solid #d5d5d5;
+    		display: none;
+    	}
+
+        /* 마지막 내용 박스의 테두리 보정 */
+    	.content:last-child { border-bottom: 1px solid #d5d5d5;	}
+	</style>
+</head>
+
+<body>
+    <!-- 전체박스 -->
+    <div class="collapse">
+        <!-- 게시글 하나 단위 -->
+    	<div class='collapse-item'>
+            <!-- 게시글 제목영역 -->
+    		<h2 class='collapse-title'><a href="#content1">제목1</a></h2>
+            <!-- 게시글 내용영역 -->
+    		<div id="content1" class="content">제목1에 해당하는 내용입니다.</div>
+    	</div>
+        <!-- 게시글 하나 단위 -->
+    	<div class='collapse-item'>
+            <!-- 게시글 제목영역 -->
+    		<h2 class='collapse-title'><a href="#content2">제목2</a></h2>
+            <!-- 게시글 내용영역 -->
+    		<div id="content2" class="content">제목2에 해당하는 내용입니다.</div>
+    	</div>
+        <!-- 게시글 하나 단위 -->
+    	<div class='collapse-item'>
+            <!-- 게시글 제목영역 -->
+    		<h2 class='collapse-title'><a href="#content3">제목3</a></h2>
+            <!-- 게시글 내용영역 -->
+    		<div id="content3" class="content">제목3에 해당하는 내용입니다.</div>
+    	</div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    	$(".collapse-title a").click(function(e){
+			e.preventDefault();
+
+			// 클릭한 요소의 href 속성을 가져온다. -> 내용 영역의 id
+			let target = $(this).attr('href');
+			//  가져온 내용영역의 id를 화면에 표시
+			//  down -> up / up -> down
+			$(target).slideToggle(100);
+			// 클릭한 요소를 제외한 다른 항목에서는 화면 숨기기
+			$(".content").not($(target)).slideUp(100);
+			
+		})
+    </script>
+</body>
+
+</html>
