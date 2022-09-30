@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+
+    <style>
+        /* disabled 속성을 갖는 요소의 배경색상 처리 */
+        input[disabled] { background-color: #eee; }
+    </style>
+</head>
+<body>    
+    <label for='username'> 입력하기 <input type="checkbox" id="input_enable" /> </label>
+    <input type='text' name='input' id='input' disabled />
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $("#input_enable").change(function(){
+            // input의 disabled 값을 가져온다. -> true or false
+            let now = $("#input").prop('disabled');
+
+            $("#input").prop('disabled', !now)
+            // 입력 가능한 상태라면
+            if( $("#input").prop('disabled') == false ){
+                $("#input").focus();
+            }
+        });
+        
+    </script>
+</body>
+
+</html>
+
+
+

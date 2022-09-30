@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+</head>
+<body>    
+    <form id="myform">
+        <div>
+            <label for='subject'>과목</label>
+            <select name="subject" id="subject">
+                <option value="">--- 선택하세요 ---</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JAVASCRIPT</option>
+            </select>
+        </div>
+        <button type="submit">입력값 확인</button>
+        <hr />
+
+        <!-- 선택결과를 표시할 div -->
+        <div id="result"></div>
+    </form>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $("#myform").submit(function(e){
+            e.preventDefault();
+
+            let subject = $("#subject").val();
+            if(!subject){
+                alert("과목을 선택해 주세요");
+                $("#subject").focus();
+                return false;
+            }
+
+            let subject_index = $("#subject > option:selected").index();
+
+            $("#result").append("<div>과목 : " + subject + "</div>");
+            $("#result").append("<div>선택한 과목의 인덱스 : " 
+                                + subject_index + "</div>");
+
+        });
+    </script>
+</body> 
+
+</html>
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+</head>
+<body>    
+    <select name="site" id="site">
+        <option value="">--- 선택하세요 ---</option>
+        <option value="http://www.naver.com">네이버</option>
+        <option value="http://www.daum.net">다음</option>
+        <option value="http://www.google.com">구글</option>
+    </select>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $("#site").change(function(){
+            let url = $(this).val();
+            if( url != "" ){
+                window.open(url);
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+

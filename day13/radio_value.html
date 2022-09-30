@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+</head>
+<body>    
+    <form id="myform">
+        <label><input type='radio' name='subject' value="html">HTML</label>
+        <label><input type='radio' name='subject' value="css">CSS</label>
+        <label><input type='radio' name='subject' value="javascript">Javascript</label>
+        <button type='submit'>입력값 확인</button>
+    </form>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $("#myform").submit(function(e){
+            e.preventDefault();
+
+            let subject = $("input[name='subject']:checked").val();
+            if( !subject ){
+                alert("선택된 항목이 없습니다.");
+                return false;
+            }
+
+            alert("선택한 항목은 " + subject + "입니다.");
+        });
+    </script>
+</body>
+
+</html>
+
+
+
