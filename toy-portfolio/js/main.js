@@ -42,19 +42,7 @@ $(window).on('load', function() {
 		'closedSymbol': '<i class="fa fa-angle-right"></i>'
 	});
 
-	/*---------------
-		Search
-	----------------*/
-    $('.search-switch').on('click', function (e) {
-		e.preventDefault();
-        $('.search-model').fadeIn(400);
-    });
 
-    $('.search-close-switch').on('click', function () {
-        $('.search-model').fadeOut(400, function () {
-            $('#search-input').val('');
-        });
-	});
 
 	/*-------------------
 		Hero Slider

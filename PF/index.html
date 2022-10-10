@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="zxx">
+	
 <head>
+
 	<title>Hong | Photography Portfolio</title>
 	<meta charset="UTF-8">
-	<meta name="description" content="Boto Photo Studio HTML Template">
+	<meta name="description" content="Hong!, PhotographyPortfolio">
 	<meta name="keywords" content="photo, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Stylesheets -->
@@ -33,9 +35,8 @@
 	<header class="header">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
 				</div>
-				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
+				<div class="text-center">
 					<a href="./index.html" class="site-logo">
 						<img src="img/logo.png" width="200" alt="">
 						<div class="logo-text">
@@ -43,15 +44,17 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
-				
-				</div>
 			</div>
 			<nav class="main__menu">
 				<ul class="nav__menu">
 					<li><a href="./index.html" class="menu--active">Home</a></li>
-					<li><a href="./gallery.html">Gallery</a></li>
-					<li><a href="./contact.html">About & Contact</a></li>
+					<li><a href="./gallery.html">Gallery</a>
+						<ul class="sub__menu">
+							<li><a href="./gallery.html">All</a></li>
+						</ul>
+					</li>
+					<li><a href="./about.html">About</a></li>
+					<li><a href="./contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -91,6 +94,22 @@
 					<img src="img/hero-slider/6.jpg" alt="">
 				</a>	
 			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/gallery/a5.jpg" data-fresco-group="projects">
+					<img src="img/gallery/a5.jpg" alt="">
+				</a>	
+			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/gallery/j2.jpg" data-fresco-group="projects">
+					<img src="img/gallery/j2.jpg" alt="">
+				</a>	
+			</div>
+			<div class="slide-item">
+				<a class="fresco" href="img/gallery/a4.jpg" data-fresco-group="projects">
+					<img src="img/gallery/a4.jpg" alt="">
+				</a>	
+			</div>
+			
 		
 		</div>
 		<div class="hero-text-slider">
@@ -120,15 +139,25 @@
 			</div>
 			<div class="text-item">
 				<h2>America</h2>
-				<p>San Francisco</p>
+				<p>Las Vegas</p>
 			</div>
-		</div>
+		
+			<div class="text-item">
+			<h2>Japan</h2>
+			<p>Tokyo</p>
+			</div>
+			<div class="text-item">
+			<h2>America</h2>
+			<p>San Francisco</p>
+			</div>
+	</div>
 	</section>
 	<!-- Hero Section end -->
 
 	<!-- Footer Section -->
 	<footer class="footer__section">
 		<div class="container">
+			<br><br><br><br><br><br>
 			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 			<div class="footer__copyright__text">
 				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
@@ -138,17 +167,7 @@
 	</footer>
 	<!-- Footer Section end -->
 
-	<!-- Search Begin -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search End -->
-
+	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery.slicknav.min.js"></script>

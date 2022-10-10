@@ -24,7 +24,7 @@ $(window).on('load', function() {
 	--------------------*/
 	$('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
-		$(this).css('background-image', 'url(' + bg + ')');
+		$(this).css('background-image', url(' hassing123534@gmail.com'));
 	});
 
 
@@ -42,19 +42,6 @@ $(window).on('load', function() {
 		'closedSymbol': '<i class="fa fa-angle-right"></i>'
 	});
 
-	/*---------------
-		Search
-	----------------*/
-    $('.search-switch').on('click', function (e) {
-		e.preventDefault();
-        $('.search-model').fadeIn(400);
-    });
-
-    $('.search-close-switch').on('click', function () {
-        $('.search-model').fadeOut(400, function () {
-            $('#search-input').val('');
-        });
-	});
 
 	/*-------------------
 		Hero Slider
@@ -110,39 +97,7 @@ $(window).on('load', function() {
 		asNavFor: '.hero-slider',
 	});
 
-	/*-------------------
-		Blog Slider
-	-------------------*/
-	$('.blog__slider').slick({
-		dots: false,
-		infinite: true,
-		speed: 300,
-		arrows: false,
-		centerMode: true,
-		centerPadding: '190px',
-		slidesToShow: 2,
-		autoplay: true,
-		pauseOnHover:false,
-		responsive: [
-			{
-				breakpoint: 991,
-				settings: {
-				centerPadding: '0',
-				slidesToShow: 2,
-				slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					centerMode: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					centerPadding: '0',
-				}
-			}
-		]
-	});
+	
 
 	/*-------------------
 		Progress Bars
